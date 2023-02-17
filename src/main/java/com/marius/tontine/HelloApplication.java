@@ -18,7 +18,8 @@ public class HelloApplication extends Application {
         try {
 
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+       // Image icon = new Image("/com/marius/tontine/icon/icon.png");
         //stage.getIcons().add(icon);
         stage.setTitle("Hello!");
         stage.setScene(scene);

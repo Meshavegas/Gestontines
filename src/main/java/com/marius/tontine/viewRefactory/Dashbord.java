@@ -3,14 +3,23 @@ package com.marius.tontine.viewRefactory;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.stage.StageStyle;
+
+import java.io.IOException;
 
 public class Dashbord {
     @FXML
@@ -187,6 +196,22 @@ public class Dashbord {
             sceancePane.toFront();
 
         }
+    }
+
+    @FXML
+    private void getAddView(ActionEvent event) {
+        try {
+
+            AnchorPane root = new FXMLLoader(getClass().getResource("/com/marius/tontine/addAdherant.fxml")).load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.initStyle(StageStyle.UTILITY);
+            stage.show();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+
     }
 
 }

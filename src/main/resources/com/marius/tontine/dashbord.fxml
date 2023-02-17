@@ -19,7 +19,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marius.tontine.viewRefactory.Dashbord">
+<AnchorPane maxHeight="650.0" maxWidth="1200.0" minHeight="650.0" minWidth="1200.0" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marius.tontine.viewRefactory.Dashbord">
    <children>
       <HBox layoutX="7.0" prefHeight="650.0" prefWidth="1192.0">
          <children>
@@ -107,6 +107,192 @@
                </children>
             </VBox>
             <StackPane prefHeight="650.0" prefWidth="844.0">
+            <GridPane fx:id="adherantPane">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="356.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="678.0" minHeight="10.0" prefHeight="594.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox fx:id="adherantVbox" prefHeight="724.0" prefWidth="881.0" style="-fx-background-color: #FB5607;" GridPane.rowIndex="1">
+                     <children>
+                        <GridPane prefHeight="721.0" prefWidth="889.0" style="-fx-background-color: #ffffff;">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="250.6666717529297" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="665.6666679382324" minHeight="10.0" prefHeight="556.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <HBox prefHeight="97.0" prefWidth="889.0">
+                                 <children>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="56.0" prefWidth="537.0" style="-fx-pref-height: 40; -fx-background-radius: 25;">
+                                       <HBox.margin>
+                                          <Insets left="12.0" top="6.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" stylesheets="@style/application.css" text="Rechercher">
+                                       <HBox.margin>
+                                          <Insets left="13.0" top="11.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="adh_add" mnemonicParsing="false" onAction="#getAddView" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: #3A86FF;" text="Inscrire">
+                                       <HBox.margin>
+                                          <Insets left="9.0" top="11.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <TableView fx:id="adherannTable" prefHeight="200.0" prefWidth="200.0" stylesheets="@style/application.css" GridPane.rowIndex="1">
+                                 <columns>
+                                    <TableColumn fx:id="adh_id" prefWidth="75.0" text="Id" />
+                                    <TableColumn fx:id="adh_nom" prefWidth="175.0" text="Nom Et Prenom" />
+                                    <TableColumn fx:id="adh_age" prefWidth="78.0" text="Age" />
+                                    <TableColumn fx:id="adh_contact" prefWidth="126.0" text="Telephone" />
+                                    <TableColumn fx:id="adh_dateInscription" prefWidth="190.0" text="Date d'incription" />
+                                    <TableColumn fx:id="adh_email" prefWidth="133.0" text="Email" />
+                                    <TableColumn fx:id="adh_sexe" prefWidth="91.0" text="Sexe" />
+                                 </columns>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" right="10.0" top="13.0" />
+                                 </GridPane.margin>
+                              </TableView>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #fefae0;">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des adherants">
+                           <font>
+                              <Font name="System Bold" size="29.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane fx:id="sceancePane">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox fx:id="sceanceVbox" prefHeight="724.0" prefWidth="881.0" style="-fx-background-color: #FB5607;">
+                     <children>
+                        <GridPane prefHeight="721.0" prefWidth="889.0" style="-fx-background-color: #ffffff;">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="250.6666717529297" minHeight="10.0" prefHeight="55.33333206176758" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="250.6666717529297" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="665.6666679382324" minHeight="10.0" prefHeight="562.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <HBox prefHeight="97.0" prefWidth="889.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <TextField fx:id="sc_input" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="56.0" prefWidth="537.0" style="-fx-pref-height: 40; -fx-background-radius: 25;" stylesheets="@style/application.css">
+                                       <HBox.margin>
+                                          <Insets left="12.0" top="6.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Button fx:id="sc_recherche" mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" stylesheets="@style/application.css" text="Rechercher">
+                                       <HBox.margin>
+                                          <Insets left="13.0" top="11.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="sc_creeBtn" mnemonicParsing="false" prefHeight="29.0" prefWidth="135.0" style="-fx-background-color: #3A86FF;" stylesheets="@style/application.css" text="Crée une Sceance">
+                                       <HBox.margin>
+                                          <Insets left="9.0" top="11.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="SceancesTable" prefHeight="200.0" prefWidth="200.0" stylesheets="@style/application.css" GridPane.rowIndex="2">
+                                 <columns>
+                                    <TableColumn fx:id="sc_id" prefWidth="94.0" text="Id" />
+                                    <TableColumn fx:id="sc_date" prefWidth="105.0" text="Date" />
+                                    <TableColumn fx:id="sc_lieu" prefWidth="130.0" text="Lieu" />
+                                    <TableColumn fx:id="sc_heure_debut" prefWidth="91.33331298828125" text="Debut à" />
+                                    <TableColumn fx:id="sc_heure_fin" prefWidth="90.0" text="Finir à" />
+                                    <TableColumn prefWidth="137.0" text="Total Credit" />
+                                    <TableColumn minWidth="9.0" prefWidth="114.33331298828125" text="Total epargne" />
+                                    <TableColumn fx:id="sc_action" prefWidth="99.3333740234375" text="Action" />
+                                 </columns>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </GridPane.margin>
+                              </TableView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des Sceances">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="13.0" />
+                                 </GridPane.margin>
+                              </Text>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+            <GridPane fx:id="epargnePane">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox fx:id="epargneVbox" prefHeight="724.0" prefWidth="881.0" style="-fx-background-color: #FB5607;">
+                     <children>
+                        <GridPane prefHeight="721.0" prefWidth="889.0" style="-fx-background-color: #ffffff;">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="250.6666717529297" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="665.6666679382324" minHeight="10.0" prefHeight="577.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TableView prefHeight="568.0" prefWidth="824.0" stylesheets="@style/application.css" GridPane.rowIndex="1">
+                                 <columns>
+                                    <TableColumn prefWidth="117.66668701171875" text="Id" />
+                                    <TableColumn prefWidth="97.0" text="Date" />
+                                    <TableColumn prefWidth="128.0" text="Montant" />
+                                    <TableColumn prefWidth="104.3333740234375" text="Id_adherant" />
+                                    <TableColumn minWidth="0.0" prefWidth="156.0" text="Nom_adherant" />
+                                    <TableColumn prefWidth="99.66668701171875" text="Id_adherant" />
+                                    <TableColumn prefWidth="165.33331298828125" text="Action" />
+                                 </columns>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </GridPane.margin>
+                              </TableView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des Epargnes">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="13.0" />
+                                 </GridPane.margin>
+                              </Text>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
             <GridPane fx:id="acceuilpane">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -245,203 +431,6 @@
                   </VBox>
                </children>
             </GridPane>
-            <GridPane fx:id="epargnePane">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-               <children>
-                  <VBox fx:id="epargneVbox" prefHeight="724.0" prefWidth="881.0" style="-fx-background-color: #FB5607;">
-                     <children>
-                        <GridPane prefHeight="721.0" prefWidth="889.0" style="-fx-background-color: #ffffff;">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints maxHeight="250.6666717529297" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="665.6666679382324" minHeight="10.0" prefHeight="577.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <TableView prefHeight="568.0" prefWidth="824.0" stylesheets="@style/application.css" GridPane.rowIndex="1">
-                                 <columns>
-                                    <TableColumn prefWidth="117.66668701171875" text="Id" />
-                                    <TableColumn prefWidth="97.0" text="Date" />
-                                    <TableColumn prefWidth="128.0" text="Montant" />
-                                    <TableColumn prefWidth="104.3333740234375" text="Id_adherant" />
-                                    <TableColumn minWidth="0.0" prefWidth="156.0" text="Nom_adherant" />
-                                    <TableColumn prefWidth="99.66668701171875" text="Id_adherant" />
-                                    <TableColumn prefWidth="165.33331298828125" text="Action" />
-                                 </columns>
-                                 <GridPane.margin>
-                                    <Insets left="10.0" right="10.0" />
-                                 </GridPane.margin>
-                              </TableView>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des Epargnes">
-                                 <font>
-                                    <Font name="System Bold" size="29.0" />
-                                 </font>
-                                 <GridPane.margin>
-                                    <Insets left="13.0" />
-                                 </GridPane.margin>
-                              </Text>
-                           </children>
-                        </GridPane>
-                     </children>
-                  </VBox>
-               </children>
-            </GridPane>
-            <GridPane fx:id="sceancePane">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-               <children>
-                  <VBox fx:id="sceanceVbox" prefHeight="724.0" prefWidth="881.0" style="-fx-background-color: #FB5607;">
-                     <children>
-                        <GridPane prefHeight="721.0" prefWidth="889.0" style="-fx-background-color: #ffffff;">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints maxHeight="250.6666717529297" minHeight="10.0" prefHeight="55.33333206176758" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="250.6666717529297" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="665.6666679382324" minHeight="10.0" prefHeight="562.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <HBox prefHeight="97.0" prefWidth="889.0" GridPane.rowIndex="1">
-                                 <children>
-                                    <TextField fx:id="sc_input" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="56.0" prefWidth="589.0" style="-fx-pref-height: 40; -fx-background-radius: 25;" stylesheets="@style/application.css">
-                                       <HBox.margin>
-                                          <Insets left="12.0" top="11.0" />
-                                       </HBox.margin>
-                                    </TextField>
-                                    <Button fx:id="sc_recherche" mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" stylesheets="@style/application.css" text="Rechercher">
-                                       <HBox.margin>
-                                          <Insets left="13.0" top="11.0" />
-                                       </HBox.margin>
-                                    </Button>
-                                    <Button fx:id="sc_creeBtn" mnemonicParsing="false" prefHeight="29.0" prefWidth="135.0" style="-fx-background-color: #3A86FF;" stylesheets="@style/application.css" text="Crée une Sceance">
-                                       <HBox.margin>
-                                          <Insets left="9.0" top="11.0" />
-                                       </HBox.margin>
-                                    </Button>
-                                 </children>
-                              </HBox>
-                              <TableView fx:id="SceancesTable" prefHeight="200.0" prefWidth="200.0" stylesheets="@style/application.css" GridPane.rowIndex="2">
-                                 <columns>
-                                    <TableColumn fx:id="sc_id" prefWidth="94.0" text="Id" />
-                                    <TableColumn fx:id="sc_date" prefWidth="105.0" text="Date" />
-                                    <TableColumn fx:id="sc_lieu" prefWidth="130.0" text="Lieu" />
-                                    <TableColumn fx:id="sc_heure_debut" prefWidth="91.33331298828125" text="Debut à" />
-                                    <TableColumn fx:id="sc_heure_fin" prefWidth="90.0" text="Finir à" />
-                                    <TableColumn prefWidth="137.0" text="Total Credit" />
-                                    <TableColumn minWidth="9.0" prefWidth="114.33331298828125" text="Total epargne" />
-                                    <TableColumn fx:id="sc_action" prefWidth="99.3333740234375" text="Action" />
-                                 </columns>
-                                 <GridPane.margin>
-                                    <Insets left="10.0" right="10.0" />
-                                 </GridPane.margin>
-                              </TableView>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des Sceances">
-                                 <font>
-                                    <Font name="System Bold" size="29.0" />
-                                 </font>
-                                 <GridPane.margin>
-                                    <Insets left="13.0" />
-                                 </GridPane.margin>
-                              </Text>
-                           </children>
-                        </GridPane>
-                     </children>
-                  </VBox>
-               </children>
-            </GridPane>
-            <GridPane fx:id="adherantPane">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints maxHeight="356.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="678.0" minHeight="10.0" prefHeight="594.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-               <children>
-                  <VBox fx:id="adherantVbox" prefHeight="724.0" prefWidth="881.0" style="-fx-background-color: #FB5607;" GridPane.rowIndex="1">
-                     <children>
-                        <GridPane prefHeight="721.0" prefWidth="889.0" style="-fx-background-color: #ffffff;">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints maxHeight="250.6666717529297" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="665.6666679382324" minHeight="10.0" prefHeight="556.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <HBox prefHeight="97.0" prefWidth="889.0">
-                                 <children>
-                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="56.0" prefWidth="626.0" style="-fx-pref-height: 40; -fx-background-radius: 25;">
-                                       <HBox.margin>
-                                          <Insets left="12.0" top="11.0" />
-                                       </HBox.margin>
-                                    </TextField>
-                                    <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" text="Rechercher">
-                                       <HBox.margin>
-                                          <Insets left="13.0" top="11.0" />
-                                       </HBox.margin>
-                                    </Button>
-                                    <Button fx:id="adh_add" mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: #3A86FF;" text="Inscrire">
-                                       <HBox.margin>
-                                          <Insets left="9.0" top="11.0" />
-                                       </HBox.margin>
-                                    </Button>
-                                 </children>
-                                 <GridPane.margin>
-                                    <Insets top="5.0" />
-                                 </GridPane.margin>
-                              </HBox>
-                              <TableView fx:id="adherannTable" prefHeight="200.0" prefWidth="200.0" stylesheets="@style/application.css" GridPane.rowIndex="1">
-                                 <columns>
-                                    <TableColumn fx:id="adh_id" prefWidth="75.0" text="Id" />
-                                    <TableColumn fx:id="adh_nom" prefWidth="175.0" text="Nom Et Prenom" />
-                                    <TableColumn fx:id="adh_age" prefWidth="78.0" text="Age" />
-                                    <TableColumn fx:id="adh_contact" prefWidth="126.0" text="Telephone" />
-                                    <TableColumn fx:id="adh_dateInscription" prefWidth="190.0" text="Date d'incription" />
-                                    <TableColumn fx:id="adh_email" prefWidth="133.0" text="Email" />
-                                    <TableColumn fx:id="adh_sexe" prefWidth="91.0" text="Sexe" />
-                                 </columns>
-                                 <GridPane.margin>
-                                    <Insets left="10.0" right="10.0" top="13.0" />
-                                 </GridPane.margin>
-                              </TableView>
-                           </children>
-                        </GridPane>
-                     </children>
-                  </VBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #fefae0;">
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des adherants">
-                           <font>
-                              <Font name="System Bold" size="29.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </HBox>
-               </children>
-            </GridPane>
-            <GridPane fx:id="configurationPane">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-               <children>
-                  <VBox fx:id="configurationVbox" prefHeight="724.0" prefWidth="881.0" style="-fx-background-color: #FB5607;" />
-               </children>
-            </GridPane>
             <GridPane fx:id="creditPane">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -463,11 +452,11 @@
                            </rowConstraints>
 
                            <children>
-                              <HBox prefHeight="97.0" prefWidth="889.0" GridPane.rowIndex="1">
+                              <HBox prefHeight="62.0" prefWidth="836.0" GridPane.rowIndex="1">
                                  <children>
-                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="56.0" prefWidth="561.0" style="-fx-pref-height: 40; -fx-background-radius: 25;">
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="56.0" prefWidth="537.0" style="-fx-pref-height: 40; -fx-background-radius: 25;">
                                        <HBox.margin>
-                                          <Insets left="12.0" top="11.0" />
+                                          <Insets left="12.0" top="6.0" />
                                        </HBox.margin>
                                     </TextField>
                                     <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" stylesheets="@style/application.css" text="Rechercher">

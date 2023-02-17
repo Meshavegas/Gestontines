@@ -60,5 +60,10 @@
             </Button>
          </children>
       </VBox>
+      <Button fx:id="close_btn" layoutX="568.0" layoutY="4.0" mnemonicParsing="false" onAction="#onConnect" prefHeight="28.0" prefWidth="31.0" style="-fx-background-color: none;" AnchorPane.bottomAnchor="372.0" AnchorPane.leftAnchor="568.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="4.0">
+         <graphic>
+            <FontAwesomeIconView glyphName="CLOSE" size="20" />
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

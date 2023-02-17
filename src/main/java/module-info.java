@@ -4,7 +4,8 @@ module com.marius.tontine {
     requires mysql.connector.j;
     requires jfoenix;
     requires de.jensd.fx.glyphs.fontawesome;
-
+    requires java.logging;
+    requires java.sql;
 
 
     opens com.marius.tontine to javafx.fxml;

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.marius.tontine.viewRefactory.AddAdherant"
+            prefHeight="500.0" prefWidth="400.0">
+    <children>
+        <GridPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #ffc971;">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="161.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="395.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Inscription d'un nouveau Adhérant" wrappingWidth="400.5078125">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                    <children>
+                        <Text fx:id="adh_statut" fill="#f50000" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="399.13671875">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Text>
+                        <TextField fx:id="adh_nom" promptText="Nom">
+                            <VBox.margin>
+                                <Insets left="20.0" right="20.0" top="6.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="adh_prenom" promptText="Nom">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="20.0" right="20.0" top="6.0" />
+                            </VBox.margin></TextField>
+                        <TextField fx:id="adh_datn" promptText="Date de naissance(aaaa-mm-jj)">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="20.0" right="20.0" top="6.0" />
+                            </VBox.margin></TextField>
+                        <TextField fx:id="adh_dataad" promptText="Date d'adhésion(aaaa-mm-jj)">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="20.0" right="20.0" top="6.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="adh_numtel" promptText="Numero telephone(237)">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="20.0" right="20.0" top="6.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="adh_mail" promptText="Adrsse mail">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="20.0" right="20.0" top="6.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="adh_sexe" promptText="Sexe(F/M)">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="20.0" right="20.0" top="6.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <HBox alignment="TOP_CENTER" prefHeight="37.0" prefWidth="400.0">
+                            <children>
+                                <Button fx:id="adh_anuler"  onAction="#addAdhereant" style="-fx-background-color: #fc0000;" text="ANNULLER" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets right="24.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="adh_valider"   graphicTextGap="21.0" mnemonicParsing="false" onAction="#addAdhereant" prefHeight="35.0" prefWidth="87.0" style="-fx-background-color: #1ddd3d;" text="VALIDER" textFill="#2d322e">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="61.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="17.0" />
+                            </VBox.margin>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

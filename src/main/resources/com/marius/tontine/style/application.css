@@ -8,12 +8,12 @@
     -fx-background-color: #ff4800;
 }
 .table-view {
-    -fx-background-color:#651FFF;
+    -fx-background-color:#eddea4;
     -fx-background-radius:14 14 0 0;
 
 }
 .table-view .column-header-background{
-    -fx-background-color: #651FFF;
+    -fx-background-color: #ca5310;
     -fx-background-radius:14;
     -fx-background-insets: 0 0 10 0;
 

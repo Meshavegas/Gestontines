@@ -27,14 +27,15 @@ public class AdherantController {
         preparedStatement.setInt(1,id);
         return preparedStatement.execute();
     }
-    public boolean addAdherant(Adherant adh) throws ClassNotFoundException, SQLException {
-
+    public static int addAdherant(Adherant adh) throws ClassNotFoundException, SQLException {
+    int isDone = 0;
         try {
             String query = "INSERT INTO adherant(nom,prenom,date_naissance,date_adhesion,contact,email,sexe) "
                     + "VALUES(?,?,?,?,?,?,?)";
 
 
             Connection con = Connexion.getConect();
+            PreparedStatement preparedStatement;
             preparedStatement = con.prepareStatement(query);
 
             preparedStatement.setString(1, adh.getNom());
@@ -45,14 +46,14 @@ public class AdherantController {
             preparedStatement.setString(6,adh.getEmail());
             preparedStatement.setString(7,adh.getSexe().toUpperCase());
 
-            return preparedStatement.execute();
+            isDone =  preparedStatement.executeUpdate();
         }
         catch(Exception e) {
-            System.err.println("Erreuer ! ");
+            System.err.println("Erreur ! ");
             System.err.println(e.getMessage());
         }
 
 
-        return false;
+        return isDone;
     }
 }

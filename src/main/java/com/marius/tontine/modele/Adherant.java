@@ -39,6 +39,10 @@ public class Adherant {
         this.sexe = sexe;
     }
 
+    public Adherant() {
+
+    }
+
     public int getId() {
         return id;
     }

@@ -476,12 +476,12 @@
                                  <columns>
                                     <TableColumn fx:id="adh_id" prefWidth="75.0" text="Id" />
                                     <TableColumn fx:id="adh_nom" prefWidth="175.0" text="Nom Et Prenom" />
-                                    <TableColumn fx:id="adh_age" prefWidth="66.0" text="Age" />
-                                    <TableColumn fx:id="adh_contact" prefWidth="103.3333740234375" text="Telephone" />
-                                    <TableColumn fx:id="adh_dateInscription" prefWidth="157.6666259765625" text="Date d'incription" />
-                                    <TableColumn fx:id="adh_email" prefWidth="102.66668701171875" text="Email" />
-                                       <TableColumn fx:id="adh_sexe" prefWidth="85.666748046875" text="Sexe" />
-                                    <TableColumn fx:id="adh_action" prefWidth="63.0" text="Action" />
+                                    <TableColumn fx:id="adh_age" prefWidth="45.0" text="Age" />
+                                    <TableColumn fx:id="adh_contact" prefWidth="125.0" text="Telephone" />
+                                    <TableColumn fx:id="adh_dateInscription" prefWidth="111.0" text="Date d'incription" />
+                                    <TableColumn fx:id="adh_email" prefWidth="123.0" text="Email" />
+                                       <TableColumn fx:id="adh_sexe" prefWidth="55.0" text="Sexe" />
+                                    <TableColumn fx:id="adh_action" prefWidth="112.0" text="Action" />
                                  </columns>
                                  <GridPane.margin>
                                     <Insets left="10.0" right="10.0" top="13.0" />

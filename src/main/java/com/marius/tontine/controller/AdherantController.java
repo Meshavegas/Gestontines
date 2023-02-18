@@ -19,4 +19,13 @@ public class AdherantController {
 
         return preparedStatement.executeQuery();
     }
+    public boolean deleteAdherant(int id) throws SQLException, ClassNotFoundException {
+        String qr = "DELETE FROM `adherant` WHERE id = ?";
+        con = Connexion.getConect();
+        preparedStatement = con.prepareStatement(qr);
+        preparedStatement.setInt(1,id);
+        return preparedStatement.execute();
+
+
+    }
 }

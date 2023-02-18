@@ -189,6 +189,7 @@ public class Dashbord implements Initializable {
     private VBox sceanceVbox;
 
     ResultSet resultSet;
+    Adherant adherant = null;
     ObservableList<Adherant> adherantsList = FXCollections.observableArrayList();
     AdherantController adherantController = new AdherantController();
 
@@ -262,6 +263,7 @@ public class Dashbord implements Initializable {
                         FontAwesomeIconView deleteicon = new FontAwesomeIconView(FontAwesomeIcon.TRASH);
                         FontAwesomeIconView editicon = new FontAwesomeIconView(FontAwesomeIcon.PENCIL_SQUARE);
 
+
                         deleteicon.setStyle(" -fx-cursor: hand ;-glyph-size:28px; -fx-fill:#ff1744;"
                         );
                         editicon.setStyle(
@@ -269,7 +271,20 @@ public class Dashbord implements Initializable {
                                         + "-glyph-size:28px;"
                                         + "-fx-fill:#00E676;"
                         );
-                        deleteicon.onMouseClickedProperty();
+
+                        deleteicon.setOnMouseClicked((MouseEvent e) ->{
+
+                            adherant = adherannTable.getSelectionModel().getSelectedItem();
+                            try {
+                                adherantController.deleteAdherant(adherant.getId());
+                                refreshTable("adherant");
+                            } catch (SQLException ex) {
+                                throw new RuntimeException(ex);
+                            } catch (ClassNotFoundException ex) {
+                                throw new RuntimeException(ex);
+                            }
+                            System.out.println("suprimer");
+                        });
                         editicon.onMouseClickedProperty();
 
                         HBox managebtn = new HBox(editicon, deleteicon);

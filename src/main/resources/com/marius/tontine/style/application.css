@@ -8,7 +8,6 @@
     -fx-background-color: #ff4800;
 }
 .table-view {
-    -fx-background-color:#eddea4;
     -fx-background-radius:14 14 0 0;
 
 }
@@ -16,8 +15,7 @@
     -fx-background-color: #ca5310;
     -fx-background-radius:14;
     -fx-background-insets: 0 0 10 0;
-
-
+    -fx-grid-lines-visible: true;
 
 }
 .table-view .column-header, .table-view .filler{

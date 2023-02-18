@@ -5,11 +5,29 @@ import java.sql.Date;
 public class Adherant {
     int id;
     String nomPrenom;
+    String nom;
+    String prenom;
+
+
     int age;
+    Date dateNaissance;
     Date dateAdhesion;
     Integer contact;
     String email;
     String sexe;
+
+    public Adherant(int id, String nomPrenom, String nom, String prenom, int age, Date dateNaissance, Date dateAdhesion, Integer contact, String email, String sexe) {
+        this.id = id;
+        this.nomPrenom = nomPrenom;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.age = age;
+        this.dateNaissance = dateNaissance;
+        this.dateAdhesion = dateAdhesion;
+        this.contact = contact;
+        this.email = email;
+        this.sexe = sexe;
+    }
 
     public Adherant(int id, String nomPrenom, int age, Date dateAdhesion, Integer contact, String email, String sexe) {
         this.id = id;
@@ -75,5 +93,33 @@ public class Adherant {
 
     public void setSexe(String sexe) {
         this.sexe = sexe;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public Date getDateNaissance() {
+        return dateNaissance;
+    }
+
+    public void setDateNaissance(Date dateNaissance) {
+        this.dateNaissance = dateNaissance;
     }
 }

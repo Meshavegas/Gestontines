@@ -5,8 +5,8 @@ import java.sql.*;
 public class Connexion {
     static Connection connection ;
     private static String url = "jdbc:mysql://localhost:3306/tontine";
-    private static String USERNAME = "root";
-    private static String PASSWORD = "Morelle #2";
+    private static String USERNAME = "";
+    private static String PASSWORD = "";
 
 
     public static Connection getConect() throws ClassNotFoundException, SQLException {

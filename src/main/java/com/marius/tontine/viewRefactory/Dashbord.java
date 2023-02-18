@@ -269,6 +269,8 @@ public class Dashbord implements Initializable {
                                         + "-glyph-size:28px;"
                                         + "-fx-fill:#00E676;"
                         );
+                        deleteicon.onMouseClickedProperty();
+                        editicon.onMouseClickedProperty();
 
                         HBox managebtn = new HBox(editicon, deleteicon);
                         managebtn.setStyle("-fx-alignment:center");

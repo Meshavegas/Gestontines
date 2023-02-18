@@ -107,77 +107,6 @@
                </children>
             </VBox>
             <StackPane prefHeight="650.0" prefWidth="844.0">
-            <GridPane fx:id="adherantPane">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints maxHeight="356.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="678.0" minHeight="10.0" prefHeight="594.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-               <children>
-                  <VBox fx:id="adherantVbox" prefHeight="724.0" prefWidth="881.0" style="-fx-background-color: #FB5607;" GridPane.rowIndex="1">
-                     <children>
-                        <GridPane prefHeight="721.0" prefWidth="889.0" style="-fx-background-color: #ffffff;">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints maxHeight="250.6666717529297" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="665.6666679382324" minHeight="10.0" prefHeight="556.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <HBox prefHeight="97.0" prefWidth="889.0">
-                                 <children>
-                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="56.0" prefWidth="537.0" style="-fx-pref-height: 40; -fx-background-radius: 25;">
-                                       <HBox.margin>
-                                          <Insets left="12.0" top="6.0" />
-                                       </HBox.margin>
-                                    </TextField>
-                                    <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" stylesheets="@style/application.css" text="Rechercher">
-                                       <HBox.margin>
-                                          <Insets left="13.0" top="11.0" />
-                                       </HBox.margin>
-                                    </Button>
-                                    <Button fx:id="adh_add" mnemonicParsing="false" onAction="#getAddView" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: #3A86FF;" text="Inscrire">
-                                       <HBox.margin>
-                                          <Insets left="9.0" top="11.0" />
-                                       </HBox.margin>
-                                    </Button>
-                                 </children>
-                                 <GridPane.margin>
-                                    <Insets top="5.0" />
-                                 </GridPane.margin>
-                              </HBox>
-                              <TableView fx:id="adherannTable" prefHeight="200.0" prefWidth="200.0" stylesheets="@style/application.css" GridPane.rowIndex="1">
-                                 <columns>
-                                    <TableColumn fx:id="adh_id" prefWidth="75.0" text="Id" />
-                                    <TableColumn fx:id="adh_nom" prefWidth="175.0" text="Nom Et Prenom" />
-                                    <TableColumn fx:id="adh_age" prefWidth="78.0" text="Age" />
-                                    <TableColumn fx:id="adh_contact" prefWidth="126.0" text="Telephone" />
-                                    <TableColumn fx:id="adh_dateInscription" prefWidth="190.0" text="Date d'incription" />
-                                    <TableColumn fx:id="adh_email" prefWidth="133.0" text="Email" />
-                                    <TableColumn fx:id="adh_sexe" prefWidth="91.0" text="Sexe" />
-                                 </columns>
-                                 <GridPane.margin>
-                                    <Insets left="10.0" right="10.0" top="13.0" />
-                                 </GridPane.margin>
-                              </TableView>
-                           </children>
-                        </GridPane>
-                     </children>
-                  </VBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #fefae0;">
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des adherants">
-                           <font>
-                              <Font name="System Bold" size="29.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </HBox>
-               </children>
-            </GridPane>
             <GridPane fx:id="sceancePane">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -499,6 +428,78 @@
                         </GridPane>
                      </children>
                   </VBox>
+               </children>
+            </GridPane>
+            <GridPane fx:id="adherantPane">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="356.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="678.0" minHeight="10.0" prefHeight="594.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox fx:id="adherantVbox" prefHeight="724.0" prefWidth="881.0" style="-fx-background-color: #FB5607;" GridPane.rowIndex="1">
+                     <children>
+                        <GridPane prefHeight="721.0" prefWidth="889.0" style="-fx-background-color: #ffffff;">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="250.6666717529297" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="665.6666679382324" minHeight="10.0" prefHeight="556.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <HBox prefHeight="97.0" prefWidth="889.0">
+                                 <children>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="56.0" prefWidth="537.0" style="-fx-pref-height: 40; -fx-background-radius: 25;">
+                                       <HBox.margin>
+                                          <Insets left="12.0" top="6.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" stylesheets="@style/application.css" text="Rechercher">
+                                       <HBox.margin>
+                                          <Insets left="13.0" top="11.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="adh_add" mnemonicParsing="false" onAction="#getAddView" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: #3A86FF;" text="Inscrire">
+                                       <HBox.margin>
+                                          <Insets left="9.0" top="11.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <TableView fx:id="adherannTable" prefHeight="200.0" prefWidth="200.0" stylesheets="@style/application.css" GridPane.rowIndex="1">
+                                 <columns>
+                                    <TableColumn fx:id="adh_id" prefWidth="75.0" text="Id" />
+                                    <TableColumn fx:id="adh_nom" prefWidth="175.0" text="Nom Et Prenom" />
+                                    <TableColumn fx:id="adh_age" prefWidth="66.0" text="Age" />
+                                    <TableColumn fx:id="adh_contact" prefWidth="103.3333740234375" text="Telephone" />
+                                    <TableColumn fx:id="adh_dateInscription" prefWidth="157.6666259765625" text="Date d'incription" />
+                                    <TableColumn fx:id="adh_email" prefWidth="102.66668701171875" text="Email" />
+                                       <TableColumn fx:id="adh_sexe" prefWidth="85.666748046875" text="Sexe" />
+                                    <TableColumn fx:id="adh_action" prefWidth="63.0" text="Action" />
+                                 </columns>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" right="10.0" top="13.0" />
+                                 </GridPane.margin>
+                              </TableView>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #fefae0;">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des adherants">
+                           <font>
+                              <Font name="System Bold" size="29.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
                </children>
             </GridPane>
             </StackPane>
